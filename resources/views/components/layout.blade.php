@@ -45,9 +45,10 @@
         </div>
         <div class="col-md-4 right ms-auto ">
             <div class="d-flex align-items-center justify-content-end">
-                <button type="button" class="navbtn btn btn-light text-dark btn-outline-light btn-md px-4 py-2 mx-1">
+
+                <a href="/login" class="navbtn btn btn-light text-dark btn-outline-light btn-md px-4 py-2 mx-1">
                     Login
-                </button>
+                </a>
                 <button type="button" class="navbtn btn btn-light text-dark btn-outline-light btn-md px-4 py-2 mx-1">
                     Sign Up
                 </button>
