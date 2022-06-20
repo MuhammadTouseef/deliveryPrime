@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="auth d-flex align-items-center justify-content-center flex-column" style="min-height: 150vh;">
+    <div class="auth d-flex align-items-center justify-content-center flex-column" style="min-height: 120vh;">
         @if ($errors->any())
             <div class="alert alert-danger my-5">
                 <ul>
@@ -15,7 +15,7 @@
             <h3 class="text-center">
                 <i class="fa-solid fa-arrow-right-to-bracket fa-2x"></i>
             </h3>
-            <form action="/business" method="post" class="form p-3" id="refrm" name="reg_form">
+            <form action="/register" method="post" class="form p-3" id="refrm" name="reg_form">
                 @csrf
                 <div class="input-group mb-3">
                     <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
@@ -35,14 +35,6 @@
                     <input type="text" class="form-control email" name="email" placeholder="Enter Email" />
                 </div>
 
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="fa-solid fa-hotel"></i></span>
-                    <input type="text"class="form-control restaurant" name="business" placeholder="Enter Business Name" />
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                    <input type="text" id="address" name="address" class="form-control username" placeholder="Enter Address" />
-                </div>
 
 
                 <div class="input-group mb-3">
@@ -50,26 +42,8 @@
                     <input type="text"class="form-control restaurant" name="contact" placeholder="Enter Contact Number" />
                 </div>
 
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><i class="fa-solid fa-city"></i></span>
-                    <select class="form-select" name="location" >
-                        <option selected value="Islamabad">Islamabad</option>
-                        <option value="Karachi">Karachi</option>
-                        <option value="Lahore">Lahore</option>
-
-                    </select>
-                </div>
 
 
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Categories</span>
-
-                    <select class="form-select" multiple="multiple" name="categories[]" id="catsele" multiple aria-label="multiple select example">
-                        <option selected>Select all Categories you deal in</option>
-
-                    </select>
-
-                </div>
 
 
 
@@ -86,7 +60,7 @@
                 <span>
                     Don't have an account?
 
-                    <a href="" class="text-center">Sign up and get started!</a>
+                    <a href="/login" class="text-center">Sign in!</a>
                 </span>
 
             </div>

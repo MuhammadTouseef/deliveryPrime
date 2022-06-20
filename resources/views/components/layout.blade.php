@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
@@ -17,7 +17,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{asset('/style/style.css')}}" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Food Delivery</title>
 </head>
 
@@ -26,10 +26,10 @@
 <nav class="navbar fixed-top navbar-dark text-white bg-dark">
     <div class="container-xxl py-3">
         <div class="col-md-4 left">
-            <h4 class="d-inline">
-                <i class="fa-solid fa-bars mx-3"></i>
-            </h4>
-            <h2 class="d-inline">Delivery Prime</h2>
+
+            <a href="/" class="text-white text-decoration-none">
+                <h2 class="d-inline">Delivery Prime</h2>
+            </a>
 
         </div>
         <div class="mx-auto col-md-4  d-none" id="navSearchBar">
@@ -69,7 +69,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="{{asset('/js/app.js')}}" />
+
+<script src="{{asset('/js/app.js')}}"></script>
 
 </body>
 

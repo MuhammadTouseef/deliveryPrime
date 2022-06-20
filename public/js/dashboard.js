@@ -30,6 +30,7 @@ const adminDelete = async (id,el)=>{
         swal({
             title: "Deleted Successfully",
             icon: "success",
+
             button: "OK",
         });
     }
@@ -40,3 +41,43 @@ const adminDelete = async (id,el)=>{
 //     console.log($(this).parent().parent())
 //     let response = await fetch('/readme.txt');
 // });
+
+
+
+// $('.dishimg').click( ()=>{
+//     console.log($(this)[0])
+//     console.log($(this).attr("href"))
+//
+//
+//
+//     return false;
+//     // $(this).parent().parent().remove();
+//     // console.log($(this).parent().parent())
+//     // let response = await fetch('/readme.txt');
+// });
+
+
+const dishdel = async (id,el)=>{
+
+    let response = await fetch(`${window.location.origin}/api/business/dishes/${id}`, {
+        method:'DELETE',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+
+
+    if (response.status === 200) {
+        let data = await response.text();
+
+        jQuery(el).parent().parent().remove();
+        swal({
+            title: "Deleted Successfully",
+            icon: "success",
+
+            button: "OK",
+        });
+    }
+
+}

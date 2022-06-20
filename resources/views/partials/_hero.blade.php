@@ -6,8 +6,14 @@
                 <span class="input-group-text bg-dark text-white" id="location">
                     <i class="fa-solid fa-location-crosshairs fa-2x "></i>
                 </span>
-            <input type="text" class="form-control py-3" placeholder="Delivery Address ..." aria-label="Username"
-                   aria-describedby="basic-addon1" />
+{{--            <input type="text" class="form-control py-3" placeholder="Delivery Address ..." aria-label="Username"--}}
+{{--                   aria-describedby="basic-addon1" />--}}
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select City </option>
+                <option value="1">Islamabad</option>
+                <option value="2">Lahore</option>
+                <option value="3">Karachi</option>
+            </select>
         </div>
 
         <div class="d-flex justify-content-center align-items-center">

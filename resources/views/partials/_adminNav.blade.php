@@ -25,6 +25,14 @@
             </h6>
         </div>
     </a>
+    <a href="categories" class="text-decoration-none">
+        <div class="sbcard bg-light py-3 my-2">
+            <h6 class="px-4 text-dark ">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                Manage Categories
+            </h6>
+        </div>
+    </a>
 
     <a href="/admin/manageadmins" class="text-decoration-none">
         <div class="sbcard bg-light py-3 my-2">

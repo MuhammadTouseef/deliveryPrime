@@ -18,8 +18,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/business/categories', [\App\Http\Controllers\CategoriesController::class, 'getall']);
+
 // Admin Routes
 Route::group(['middleware' => ['auth','roleVerify:Admin']], function () {
     Route::delete('/admin/admindelete/{users}', [\App\Http\Controllers\UserController::class, 'adminDelete']);
+
+});
+
+
+// Business Routes
+
+Route::group(['middleware' => ['auth','roleVerify:Business']], function () {
+
+    Route::delete('business/dishes/{dish}', [\App\Http\Controllers\DishesController::class, 'deleteDish']);
 
 });
